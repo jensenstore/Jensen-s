@@ -5,216 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jensen's | Catálogo de Luxo</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --ouro-luxo: #c5a059;
-            --preto-profundo: #0a0a0a;
-            --cinza-escuro: #333333;
-            --cinza-fundo: #f8f8f8;
-            --branco: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--cinza-fundo);
-            color: var(--cinza-escuro);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--preto-profundo);
-            color: var(--ouro-luxo);
-            text-align: center;
-            padding: 60px 20px;
-            border-bottom: 2px solid var(--ouro-luxo);
-        }
-
-        header h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 3.2rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            margin-top: 10px;
-            color: #aaa;
-            text-transform: uppercase;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        .tutorial-box {
-            background: var(--preto-profundo);
-            color: var(--branco);
-            text-align: center;
-            padding: 30px;
-            margin: 0 auto 50px auto;
-            border-radius: 4px;
-            border: 1px solid var(--ouro-luxo);
-            max-width: 850px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .tutorial-box h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--ouro-luxo);
-            margin-bottom: 15px;
-            font-size: 1.6rem;
-        }
-
-        .tutorial-box p {
-            font-size: 0.9rem;
-            font-weight: 300;
-            color: #ddd;
-        }
-
-        .sessao-titulo {
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            color: var(--preto-profundo);
-            text-align: center;
-            margin: 40px 0 20px 0;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-        }
-
-        .grid-perfumes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .card {
-            background: var(--branco);
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #eaeaea;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            border-color: var(--ouro-luxo);
-        }
-
-        /* Estilo da foto para ficar perfeita e não distorcer */
-        .foto-perfume {
-            width: 100%;
-            height: 380px;
-            object-fit: cover;
-            display: block;
-            background-color: #f1f1f1; /* Cor de fundo caso a foto demore a carregar */
-        }
-
-        .card-body {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .categoria {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            color: var(--ouro-luxo);
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
-        }
-
-        .nome-perfume {
-            font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
-            color: var(--preto-profundo);
-            margin-bottom: 5px;
-        }
-
-        .familia-olfativa {
-            font-size: 0.8rem;
-            font-style: italic;
-            color: #777;
-            margin-bottom: 15px;
-        }
-
-        .preco {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--preto-profundo);
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .descricao {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 25px;
-            flex-grow: 1;
-            text-align: justify;
-        }
-
-        .descricao strong {
-            color: var(--preto-profundo);
-        }
-
-        .btn-whats {
-            display: block;
-            text-align: center;
-            background-color: var(--preto-profundo);
-            color: var(--ouro-luxo);
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: 0.3s;
-            border: 1px solid var(--ouro-luxo);
-        }
-
-        .btn-whats:hover {
-            background-color: var(--ouro-luxo);
-            color: var(--preto-profundo);
-        }
-
-        footer {
-            background-color: var(--preto-profundo);
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #666;
-            margin-top: 60px;
-            border-top: 1px solid var(--ouro-luxo);
-        }
-
-        footer strong {
-            color: var(--ouro-luxo);
-            letter-spacing: 2px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.2rem; letter-spacing: 3px; }
-            .tutorial-box { padding: 20px; margin-bottom: 30px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -234,62 +25,75 @@
 
     <div class="grid-perfumes">
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Lattafa Asad" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="PRINCIPAL.webp" alt="Lattafa Asad Principal">
+                <img src="D_NQ_NP_2X_819025-MLA101056183513_122025-F.webp" alt="Lattafa Asad Caixa">
+                <img src="D_NQ_NP_2X_631417-MLA104110576142_012026-F.webp" alt="Lattafa Asad Notas">
+                <img src="D_NQ_NP_2X_921203-MLA100561971484_122025-F.webp" alt="Lattafa Asad Aberto">
+            </div>
             <div class="card-body">
                 <span class="categoria">Árabe</span>
                 <h3 class="nome-perfume">Lattafa Asad</h3>
                 <p class="familia-olfativa">Âmbar Especiado</p>
                 <p class="preco">R$ 300,00</p>
                 <p class="descricao"><strong>Notas:</strong> Pimenta Preta, Café e Baunilha.<br><br>O Rei da Noite. Uma fragrância imponente que funde a intensidade das especiarias com um fundo quente. Assinatura olfativa marcante.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Lattafa%20Asad." class="btn-whats">Consultar Disponibilidade</a>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Lattafa%20Asad." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Lattafa Asad Bourbon" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_BOURBON_1.jpg" alt="Asad Bourbon">
+                </div>
             <div class="card-body">
                 <span class="categoria">Árabe</span>
                 <h3 class="nome-perfume">Asad Bourbon</h3>
                 <p class="familia-olfativa">Oriental Especiado Gourmand</p>
                 <p class="preco">R$ 280,00</p>
-                <p class="descricao"><strong>Notas:</strong> Cacau, Pimenta Rosa e Baunilha de Bourbon.<br><br>A Nova Sedução. Eleva o DNA de sucesso adicionando um toque irresistível de cacau. Um perfume envolvente, noturno e sedutor.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Lattafa%20Asad%20Bourbon." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Cacau, Pimenta Rosa e Baunilha de Bourbon.<br><br>A Nova Sedução. Eleva o DNA de sucesso adicionando um toque irresistível de cacau. Um perfume envolvente e noturno.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Asad%20Bourbon." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Ferrari Black" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_FERRARI_1.jpg" alt="Ferrari Black">
+            </div>
             <div class="card-body">
                 <span class="categoria">Clássico</span>
                 <h3 class="nome-perfume">Ferrari Black</h3>
                 <p class="familia-olfativa">Aromático Fougère</p>
                 <p class="preco">R$ 240,00</p>
-                <p class="descricao"><strong>Notas:</strong> Maçã, Canela, Baunilha e Cedro.<br><br>O Curinga Infalível. A escolha perfeita para o dia a dia e eventos casuais. Excelente fixação para o clima brasileiro sem ser invasivo.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Ferrari%20Black." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Maçã, Canela, Baunilha e Cedro.<br><br>O Curinga Infalível. A escolha perfeita para o dia a dia. Excelente fixação para o clima brasileiro sem ser invasivo.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Ferrari%20Black." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Azzaro Pour Homme" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_AZZARO_1.jpg" alt="Azzaro">
+            </div>
             <div class="card-body">
                 <span class="categoria">Clássico</span>
                 <h3 class="nome-perfume">Azzaro Pour Homme</h3>
                 <p class="familia-olfativa">Aromático Fougère Clássico</p>
                 <p class="preco">R$ 280,00</p>
-                <p class="descricao"><strong>Notas:</strong> Anis, Lavanda, Musgo de Carvalho e Couro.<br><br>O Clássico Imortal. Um ícone da perfumaria mundial que entrega o puro cheiro do homem maduro, elegante e de presença.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Azzaro%20Pour%20Homme." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Anis, Lavanda e Couro.<br><br>O Clássico Imortal. Um ícone da perfumaria mundial que entrega o puro cheiro do homem maduro, elegante e de presença.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Azzaro." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Ralph Lauren Safari" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_SAFARI_1.jpg" alt="Safari">
+            </div>
             <div class="card-body">
                 <span class="categoria">Clássico Premium</span>
                 <h3 class="nome-perfume">Safari for Men</h3>
                 <p class="familia-olfativa">Amadeirado Aromático</p>
                 <p class="preco">R$ 320,00</p>
-                <p class="descricao"><strong>Notas:</strong> Artemísia, Couro e Sândalo.<br><br>A Elegância Aventureira. Uma fragrância vintage que respira luxo, combinando notas herbais em um frasco de cristal espetacular.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Ralph%20Lauren%20Safari." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Artemísia, Couro e Sândalo.<br><br>A Elegância Aventureira. Uma fragrância vintage que respira luxo, combinando notas herbais em um frasco de cristal.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Safari." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
     </div>
@@ -298,62 +102,72 @@
 
     <div class="grid-perfumes">
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Lattafa Yara" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_YARA_1.jpg" alt="Lattafa Yara">
+            </div>
             <div class="card-body">
                 <span class="categoria">Árabe</span>
                 <h3 class="nome-perfume">Lattafa Yara</h3>
                 <p class="familia-olfativa">Âmbar Baunilha Frutado</p>
                 <p class="preco">R$ 270,00</p>
-                <p class="descricao"><strong>Notas:</strong> Orquídea, Frutas Tropicais e Baunilha.<br><br>A essência da feminilidade moderna. Uma composição aveludada e irresistivelmente cremosa que rende elogios o dia inteiro.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Lattafa%20Yara." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Orquídea e Baunilha.<br><br>A essência da feminilidade moderna. Uma composição aveludada e irresistivelmente cremosa que rende elogios o dia inteiro.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Lattafa%20Yara." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Lattafa Fakhar" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_FAKHAR_1.jpg" alt="Fakhar Rose">
+            </div>
             <div class="card-body">
                 <span class="categoria">Árabe Premium</span>
                 <h3 class="nome-perfume">Fakhar Rose</h3>
                 <p class="familia-olfativa">Floral Branco</p>
                 <p class="preco">R$ 270,00</p>
-                <p class="descricao"><strong>Notas:</strong> Tuberosa, Jasmim e Ambroxan.<br><br>A Elegância da Noiva Árabe. Um buquê deslumbrante de flores brancas. Transmite poder, feminilidade e classe pura em um frasco de luxo.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Lattafa%20Fakhar." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Tuberosa e Jasmim.<br><br>A Elegância da Noiva Árabe. Um buquê deslumbrante de flores brancas. Transmite poder, feminilidade e classe pura.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Fakhar%20Rose." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Sabah Al Ward Tradicional" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_SABAH_1.jpg" alt="Sabah Al Ward">
+            </div>
             <div class="card-body">
                 <span class="categoria">Árabe</span>
                 <h3 class="nome-perfume">Sabah Al Ward</h3>
                 <p class="familia-olfativa">Oriental Floral</p>
                 <p class="preco">R$ 250,00</p>
-                <p class="descricao"><strong>Notas:</strong> Pimenta Rosa, Cacau e Jasmim.<br><br>O Mistério Sedutor. Uma fragrância profunda e enigmática. Notas de cacau trazem uma doçura sofisticada, ideal para a noite.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Sabah%20Al%20Ward%20Tradicional." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Pimenta Rosa e Cacau.<br><br>O Mistério Sedutor. Uma fragrância profunda e enigmática. Notas de cacau trazem uma doçura sofisticada para a noite.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Sabah%20Al%20Ward." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Sabah Al Ward Lançamento" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_SABAH_PINK_1.jpg" alt="Sabah Al Ward Pink">
+            </div>
             <div class="card-body">
                 <span class="categoria">Árabe Lançamento</span>
-                <h3 class="nome-perfume">Sabah Al Ward Pink</h3>
+                <h3 class="nome-perfume">Sabah Pink</h3>
                 <p class="familia-olfativa">Frutado Doce / Floral</p>
                 <p class="preco">R$ 270,00</p>
-                <p class="descricao"><strong>Notas:</strong> Frutas Adocicadas, Buquê Floral e Baunilha.<br><br>A Nova Essência. Mais vibrante e jovial. Para a mulher que busca algo ainda mais magnético e moderno para atrair todos os olhares.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Sabah%20Al%20Ward%20Pink%20Lançamento." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Frutas Adocicadas e Baunilha.<br><br>A Nova Essência. Mais vibrante e jovial. Para a mulher que busca algo ainda mais magnético e moderno.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Sabah%20Pink." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="COLE_O_LINK_DA_FOTO_AQUI.jpg" alt="Britney Spears Fantasy" class="foto-perfume">
+            <div class="carrossel-fotos">
+                <img src="FOTO_FANTASY_1.jpg" alt="Fantasy">
+            </div>
             <div class="card-body">
                 <span class="categoria">Clássico Importado</span>
                 <h3 class="nome-perfume">Fantasy</h3>
                 <p class="familia-olfativa">Floral Frutado Gourmand</p>
                 <p class="preco">Consulte</p>
-                <p class="descricao"><strong>Notas:</strong> Kiwi, Lichia, Chocolate Branco e Cupcake.<br><br>O Clássico Nostálgico. Doce, divertido e atemporal. Uma fragrância que dá água na boca e chama atenção sem esforço.</p>
-                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Britney%20Spears%20Fantasy." class="btn-whats">Consultar Disponibilidade</a>
+                <p class="descricao"><strong>Notas:</strong> Chocolate Branco e Cupcake.<br><br>O Clássico Nostálgico. Doce e atemporal. Uma fragrância que dá água na boca e chama atenção sem esforço.</p>
+                <a href="https://wa.me/5547999700008?text=Olá!%20Vi%20no%20catálogo%20e%20tenho%20interesse%20no%20Fantasy." class="btn-whats" target="_blank" rel="noopener noreferrer">Consultar Disponibilidade</a>
             </div>
         </div>
     </div>
