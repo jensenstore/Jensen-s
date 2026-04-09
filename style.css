@@ -1,0 +1,207 @@
+:root {
+    --ouro-luxo: #c5a059;
+    --preto-profundo: #0a0a0a;
+    --cinza-escuro: #333333;
+    --cinza-fundo: #f8f8f8;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cinza-fundo);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--preto-profundo);
+    color: var(--ouro-luxo);
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 2px solid var(--ouro-luxo);
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.tutorial-box {
+    background: var(--preto-profundo);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto 50px auto;
+    border-radius: 4px;
+    border: 1px solid var(--ouro-luxo);
+    max-width: 850px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.tutorial-box h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--ouro-luxo);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.tutorial-box p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #ddd;
+}
+
+.sessao-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--preto-profundo);
+    text-align: center;
+    margin: 40px 0 20px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.grid-perfumes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: var(--branco);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eaeaea;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-color: var(--ouro-luxo);
+}
+
+.foto-perfume {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    background-color: #f1f1f1; 
+}
+
+.card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--ouro-luxo);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.nome-perfume {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: var(--preto-profundo);
+    margin-bottom: 5px;
+}
+
+.familia-olfativa {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--preto-profundo);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.descricao {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.descricao strong {
+    color: var(--preto-profundo);
+}
+
+.btn-whats {
+    display: block;
+    text-align: center;
+    background-color: var(--preto-profundo);
+    color: var(--ouro-luxo);
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    border: 1px solid var(--ouro-luxo);
+}
+
+.btn-whats:hover {
+    background-color: var(--ouro-luxo);
+    color: var(--preto-profundo);
+}
+
+footer {
+    background-color: var(--preto-profundo);
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 60px;
+    border-top: 1px solid var(--ouro-luxo);
+}
+
+footer strong {
+    color: var(--ouro-luxo);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 2.2rem; letter-spacing: 3px; }
+    .tutorial-box { padding: 20px; margin-bottom: 30px; }
+}
