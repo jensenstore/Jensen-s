@@ -106,12 +106,31 @@ header p {
     border-color: var(--ouro-luxo);
 }
 
-.foto-perfume {
+/* --- DESIGN DO CARROSSEL --- */
+.carrossel-fotos {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ouro-luxo) #f1f1f1;
+    background-color: #f1f1f1;
+}
+
+/* Esconder barra no mobile mas manter funcional */
+.carrossel-fotos::-webkit-scrollbar {
+    height: 4px;
+}
+.carrossel-fotos::-webkit-scrollbar-thumb {
+    background: var(--ouro-luxo);
+    border-radius: 10px;
+}
+
+.carrossel-fotos img {
+    flex: 0 0 100%;
     width: 100%;
-    height: 380px;
+    height: 400px; /* Altura ideal para mobile */
     object-fit: cover;
-    display: block;
-    background-color: #f1f1f1; 
+    scroll-snap-align: start;
 }
 
 .card-body {
@@ -161,10 +180,6 @@ header p {
     text-align: justify;
 }
 
-.descricao strong {
-    color: var(--preto-profundo);
-}
-
 .btn-whats {
     display: block;
     text-align: center;
@@ -203,5 +218,5 @@ footer strong {
 
 @media (max-width: 600px) {
     header h1 { font-size: 2.2rem; letter-spacing: 3px; }
-    .tutorial-box { padding: 20px; margin-bottom: 30px; }
+    .carrossel-fotos img { height: 350px; }
 }
